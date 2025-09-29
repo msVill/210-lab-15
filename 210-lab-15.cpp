@@ -4,24 +4,26 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <string>
+
 using namespace std;
 
 class Movie {
     private:
         string title;
         int yearReleased;
-        string screenWrite;
+        string screenWriter;
 
         public:
             //getters
-            string get Title() const { return title; }
+            string getTitle() const { return title; }
             int getYearReleased() const { return yearReleased; }
             string getScreenWriter() const {return screenWriter; }
 
             //setters
             void setTitle(string t) { title = t; }
-            void setYearReleased(int y) {yearReleaded = y; }
-            void setScreenWriter(string s) { return screenWriter = s; }
+            void setYearReleased(int y) {yearReleased = y; }
+            void setScreenWriter(string s) { screenWriter = s; }
 
             //print method
             void print() const {
@@ -42,6 +44,9 @@ int main() {
     }
 
     while(true) {
-        
+        string title, writer;
+        int year;
+
+        if(!getline(fin, title)) break; 
     }
 }
