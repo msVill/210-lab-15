@@ -27,7 +27,7 @@ class Movie {
     void setYear(int y) { year = y; }
     void setName(string n) { name = n; }
     
-    //found out that when people use the term "method", in C++, it means it's a class member!
+    //found out that when people use the term "method", in C++, it means it's a class member specifically...?
     void print() {
        // cout << w
     }
@@ -36,7 +36,15 @@ class Movie {
 int main() {
 
     vector<Movie> movies;
-    ifstream file ("movies.txt");
-
+    ifstream file;
+    string t; //temporary var for Title
+    int y; //temp. var. for year
+    string n; // temp. var. for name.
+    
+    file.open("movies.txt");
+    if(!file) { // I want to make sure that the input file is found first.
+        cout << "Error: Can't find file. Please try again." << endl;
+        exit(-1);
+    }
     return 0;
 }
