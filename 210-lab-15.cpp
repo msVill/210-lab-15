@@ -54,7 +54,10 @@ int main() {
         Movie tmp_M;
         tmp_M.setTitle(t);
         tmp_M.setYear(y);
-        
+        tmp_M.setName(n);
+        movies.push_back(tmp_M);
     }
+    file.close();
+    
     return 0;
 }
