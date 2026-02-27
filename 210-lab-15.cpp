@@ -36,7 +36,7 @@ class Movie {
 int main() {
 
     vector<Movie> movies;
-    ifstream file;
+    ifstream file; // object var. of ifstream type.
     string t; //temporary var for Title
     int y; //temp. var. for year
     string n; // temp. var. for name.
@@ -45,6 +45,16 @@ int main() {
     if(!file) { // I want to make sure that the input file is found first.
         cout << "Error: Can't find file. Please try again." << endl;
         exit(-1);
+    }
+    while(!file.eof()) {
+        getline(file, t);
+        file >> y;
+        file.ignore();
+        getline(file, n);
+        Movie tmp_M;
+        tmp_M.setTitle(t);
+        tmp_M.setYear(y);
+        
     }
     return 0;
 }
