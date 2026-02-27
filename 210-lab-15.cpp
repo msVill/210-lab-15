@@ -1,30 +1,39 @@
 // comsc 210 | lab 15 | Martha Stephanie Villalta
-// class Movie: screenWriter, yearReleased, title as private class members
-// getters and setters public class members for screenWriter, yearReleased, and title.
-// print method (could not determine from the requirements whether as a class member or as a global function. 
+
+// print method
 // Needs to read data IN from an input file in specified order: title, yearReleased, screenWriter.
 // read/pass this data into temporary Movie object.
 // append that object to a container: <array> / <vector>
 // Towards end of main(): output data in array/vector.
+
 #include <iostream>
 #include <fstream>
 #include <vector>
 using namespace std;
 
 class Movie {
+    //priavet class members. class is default private.
     string title;
     int year;
     string name;
 
     public:
     //getters:
-    string getName
+    string getTitle() { return title; } //I realize now that inline is convenient for short code and nice to use.
+    int getYear() { return year; } // I still prefer to keep it more spread out though.
+    string getName() { return name; }
+    //setters:
+    void setTitle(string t) { title = t; }
+    void setYear(int y) { year = y; }
+    void setName(string n) { name = n; }
 };
 
+//global print method/function:
+void print() {
+
+}
+
 int main() {
-    // Okay, from what I know:
-    // If I want to use an input file and iterate through it, I need to make it so that
-    // the object that holds it can read it in first, and check if true/found. else/false/not found.
 
     return 0;
 }
