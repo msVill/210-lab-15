@@ -26,14 +26,17 @@ class Movie {
     void setTitle(string t) { title = t; }
     void setYear(int y) { year = y; }
     void setName(string n) { name = n; }
+    
+    //found out that when people use the term "method", in C++, it means it's a class member!
+    void print() {
+       // cout << w
+    }
 };
 
-//global print method/function:
-void print() {
-
-}
-
 int main() {
+
+    vector<Movie> movies;
+    ifstream file ("movies.txt");
 
     return 0;
 }
