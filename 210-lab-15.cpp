@@ -6,12 +6,19 @@
 // read/pass this data into temporary Movie object.
 // append that object to a container: <array> / <vector>
 // Towards end of main(): output data in array/vector.
+#include <iostream>
+#include <fstream>
+#include <vector>
+using namespace std;
 
 class Movie {
-
+    string screenWriter; // wait, I want to review some more before I continue.
 };
 
 int main() {
+    // Okay, from what I know:
+    // If I want to use an input file and iterate through it, I need to make it so that
+    // the object that holds it can read it in first, and check if true/found. else/false/not found.
 
     return 0;
 }
