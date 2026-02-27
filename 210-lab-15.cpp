@@ -1,12 +1,12 @@
 // comsc 210 | lab 15 | Martha Stephanie Villalta
 
 // print method
-// Needs to read data IN from an input file in specified order: title, yearReleased, screenWriter.
-// read/pass this data into temporary Movie object.
+
 // append that object to a container: <array> / <vector>
 // Towards end of main(): output data in array/vector.
 
 #include <iostream>
+#include <iomanip>
 #include <fstream>
 #include <vector>
 using namespace std;
@@ -27,9 +27,11 @@ class Movie {
     void setYear(int y) { year = y; }
     void setName(string n) { name = n; }
     
-    //found out that when people use the term "method", in C++, it means it's a class member specifically...?
+    //found out that when people use the term "method" in C++, it means it's a class member specifically...?
     void print() {
-       // cout << w
+       cout << "Movie: " << title << endl;
+       cout << "Year Released: " << year << endl;
+       cout << "Screenwrite: " << name << endl;
     }
 };
 
@@ -58,6 +60,10 @@ int main() {
         movies.push_back(tmp_M);
     }
     file.close();
-    
+
+    for(auto var : movies) {
+        cout << var.getTitle() << endl;
+    }
+
     return 0;
 }
