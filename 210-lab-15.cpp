@@ -31,7 +31,7 @@ class Movie {
     void print() {
        cout << "Movie: " << title << endl;
        cout << "Year Released: " << year << endl;
-       cout << "Screenwrite: " << name << endl;
+       cout << "Screenwriter: " << name << endl;
     }
 };
 
@@ -62,7 +62,8 @@ int main() {
     file.close();
 
     for(auto var : movies) {
-        cout << var.getTitle() << endl;
+        var.print();
+        cout << endl;
     }
 
     return 0;
