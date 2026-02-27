@@ -12,7 +12,13 @@
 using namespace std;
 
 class Movie {
-    string screenWriter; // wait, I want to review some more before I continue.
+    string title;
+    int year;
+    string name;
+
+    public:
+    //getters:
+    string getName
 };
 
 int main() {
